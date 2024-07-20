@@ -1,5 +1,9 @@
 from nada_dsl import *
 
+def add(a,b,c):
+  return a+b+c
+
+
 def nada_main():
     party1 = Party(name="Party1")
     # party2 = Party(name="Party2")
@@ -8,6 +12,6 @@ def nada_main():
     b = SecretInteger(Input(name="b", party=party1))
     c = SecretInteger(Input(name="c", party=party1))
 
-    result = a * b * c
+    result = add(a,b,c)
 
     return [Output(result, "my_output", party1)]
