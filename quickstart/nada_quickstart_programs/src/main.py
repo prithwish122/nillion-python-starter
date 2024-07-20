@@ -1,7 +1,11 @@
 from nada_dsl import *
 
 def add(a,b,c):
-  return a+b+c
+    sequence: list[SecretInteger] = []
+    sequence.append(a)
+    sequence.append(b)
+    sequence.append(c)
+    return sequence[0]+sequence[1]/sequence[2]
 
 
 def nada_main():
